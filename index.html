@@ -3,11 +3,60 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Jeu2d</title>
+    <title>Jeu2d Rythmé</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #111;
+        }
+
+        #menu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            z-index: 10;
+            background: #222;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .field {
+            margin: 15px 0;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    <canvas></canvas>
+    <div id="menu">
+        <h1>Jeu Rythmé</h1>
+        <div class="field">
+            <p>Choisis un fichier MP3 :</p>
+            <input type="file" id="audiofile" accept="audio/mp3">
+        </div>
+        <div class="field">
+            <label for="maxEnemiesInput">Ennemis max sur l'écran :</label><br>
+            <input type="number" id="maxEnemiesInput" min="1" max="50" value="10">
+        </div>
+        <div class="field">
+            <label for="enemySpeedInput">Vitesse des ennemis :</label><br>
+            <input type="number" id="enemySpeedInput" min="1" max="10" value="3">
+        </div>
+        <br>
+        <button id="startBtn" disabled>Démarrer</button>
+    </div>
+    <canvas style="display: none;"></canvas>
     <script type="module" src="js/script.js"></script>
 </body>
 
