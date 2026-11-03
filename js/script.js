@@ -5,7 +5,9 @@ const audioFileInput = document.getElementById('audiofile')
 const maxEnemiesInput = document.getElementById('maxEnemiesInput')
 const enemySpeedInput = document.getElementById('enemySpeedInput')
 const startBtn = document.getElementById('startBtn')
-
+//la musique doit continuer de jouer en game over, le joeuur gagne quand la chanson est finie
+//revoir les couleur: chercher les analyses d'instruments selon leurs range de féquence et ensuite une couleur est
+//un instrument
 canvas.width = innerWidth
 canvas.height = innerHeight
 
